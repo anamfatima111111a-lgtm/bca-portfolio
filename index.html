@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anam fatima<title/>
+    <title>My Portfolio | BCA Student</title>
+    <style>
+        /* 1. Global Reset & Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #353;
+            line-height: 1.6;
+        }
+
+        /* 2. Header Section */
+        header {
+            background-color: #1e293b;
+            color: #fsdgff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+        }
+
+        /* 3. Main Container Layout */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* 4. Individual Section Styling */
+        section {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        /* 5. Skills Grid Layout (Flexbox) */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-badge {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* 6. Projects List Styling */
+        .project-card {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .project-card h3 {
+            margin-bottom: 5px;
+            color: #1e293b;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 7. Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Block -->
+    <header>
+        <h1>Hello, I'm a BCA Student</h1>
+        <p>Aspiring Front-End Web Developer</p>
+<button id="theme-btn" style="margin-top: 15px; padding: 8px 16px; font-weight: bold; cursor: pointer; border-radius: 4px; border: none; background-color: #2563eb; color: white;">Toggle Dark Mode</button>
+</header>
+
+    <div class="container">
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a computer applications student focused on building clean web architectures. While I possess a strong theoretical understanding of database management systems, network fundamentals, and core programming paradigms, I am actively building my physical project portfolio to apply these concepts in real-world environments.</p>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills (Theoretical & Practical)</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3 Layouts</span>
+                <span class="skill-badge">JavaScript (ES6)</span>
+                <span class="skill-badge">Git & GitHub</span>
+                <span class="skill-badge">DBMS / SQL Basics</span>
+                <span class="skill-badge">Object-Oriented Programming</span>
+            </div>
+        </section>
+
+        <!-- Projects Section (Your Placeholders) -->
+        <section id="projects">
+            <h2>My Practical Work</h2>
+            
+            <div class="project-card">
+                <h3>1. Personal Portfolio Website</h3>
+                <p>A responsive layout built entirely from scratch with HTML5 and custom semantic CSS configurations to demonstrate layout modeling.</p>
+                <span class="project-link">👉 You are looking at it live!</span>
+            </div>
+
+            <div class="project-card">
+                <h3>2. JavaScript Project (Coming Soon)</h3>
+                <p>My next objective is to integrate basic interactive JavaScript engines (like a calculation matrix or real-time API counter).</p>
+                <a href="#" class="project-link">GitHub Repository Link</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Block -->
+    <footer>
+        <p>&copy; 2026 | Built to clear Internshala screening parameters.</p>
+    </footer>
+    <!-- Add this JavaScript engine right before the closing body tag 👇 -->
+    <script>
+        // 1. Target the button and the body elements in the document
+        const themeButton = document.getElementById('theme-btn');
+        const bodyElement = document.body;
+
+        // 2. Instruct the browser to watch for a user "click"
+        themeButton.addEventListener('click', function() {
+            
+            // 3. Check what color the page background currently is
+            if (bodyElement.style.backgroundColor === 'rgb(30, 41, 59)') {
+                // If it is dark, change it back to light grey
+                bodyElement.style.backgroundColor = '#f4f7f6';
+                bodyElement.style.color = '#333333';
+                themeButton.innerText = 'Toggle Dark Mode';
+                themeButton.style.backgroundColor = '#2563eb';
+            } else {
+                // If it is light, change it to deep dark slate blue
+                bodyElement.style.backgroundColor = '#1e293b';
+                bodyElement.style.color = '#f8fafc';
+                themeButton.innerText = 'Toggle Light Mode';
+                themeButton.style.backgroundColor = '#e2e8f0';
+                themeButton.style.color = '#1e293b';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
